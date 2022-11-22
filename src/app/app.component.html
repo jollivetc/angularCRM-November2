@@ -5,3 +5,6 @@
 </mat-toolbar>
 
 <crm-login></crm-login>
+
+<crm-dummy label="Hello" (sended)="received($event)"></crm-dummy>
+<crm-dummy [label]="title" (sended)="received2($event)"></crm-dummy>
