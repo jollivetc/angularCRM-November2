@@ -1,3 +1,7 @@
 .backInRed {
   background-color: red;
 }
+
+.ng-touched.ng-invalid {
+  border-color: red;
+}

@@ -1,12 +1,3 @@
 {{title}}
-<p [ngClass]="niceClass">
-  {{price * 1.2}}
-</p>
 
-<img [src]="imageUrl" [alt]="legend" (click)="increaseCounter()">
-{{counter}}
-
-<ul>
-  <li *ngFor="let fruit of fruits, let isodd=odd"
-      [ngClass]="{backInRed:isodd}">{{fruit}}</li>
-</ul>
+<crm-login></crm-login>
