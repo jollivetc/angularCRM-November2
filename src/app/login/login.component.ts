@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { AuthenticationService } from './authentication.service';
 
 @Component({
   selector: 'crm-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
           no$InPassword: 'No $ in password'}
 
   loginForm:FormGroup;
-  constructor() {
+
+  constructor(private authent:AuthenticationService) {
     this.loginForm = new FormGroup({
       login: new FormControl('',[Validators.required, Validators.minLength(3)]),
       password: new FormControl('',[Validators.required, no$InPassword])
@@ -25,7 +27,9 @@ export class LoginComponent implements OnInit {
   }
 
   logMeIn():void{
-    console.log(this.loginForm);
+    const user = this.authent.authentUser(this.loginForm.value.login,
+                                          this.loginForm.value.password)
+    console.log(user);
   }
 }
 function no$InPassword(c:AbstractControl):ValidationErrors|null {
