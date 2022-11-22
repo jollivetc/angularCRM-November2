@@ -5,21 +5,16 @@
       <mat-label for="login">login</mat-label>
       <input matInput type="text" name="login" formControlName="login">
     </mat-form-field>
-    <span *ngIf="loginForm.get('login')?.touched
-                    && loginForm.get('login')?.invalid">
-      <span *ngIf="loginForm.get('login')?.errors?.['required']">
-        please enter your login
-      </span>
-      <span *ngIf="loginForm.get('login')?.errors?.['minlength']">
-        minimal length if 3 characters
-      </span>
-    </span>
+    <crm-help [field]="loginForm.get('login')!"
+              [errorMessages]="loginErrorMessages"></crm-help>
   </p>
   <p>
     <mat-form-field>
       <mat-label for="password">password</mat-label>
       <input matInput type="password" name="password" formControlName="password">
     </mat-form-field>
+    <crm-help [field]="loginForm.get('password')!"
+              [errorMessages]="passwordErrorMessages"></crm-help>
   </p>
   <button mat-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
 </form>

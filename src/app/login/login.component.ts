@@ -8,6 +8,11 @@ import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators }
 })
 export class LoginComponent implements OnInit {
 
+  loginErrorMessages = {required: 'missing login',
+          minlength: 'at least 3 characters'};
+  passwordErrorMessages = {required:'missing password',
+          no$InPassword: 'No $ in password'}
+
   loginForm:FormGroup;
   constructor() {
     this.loginForm = new FormGroup({
