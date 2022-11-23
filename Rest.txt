@@ -1,0 +1,13 @@
+/consumers
+
+GET /consumers  => all consumers => 200
+GET /consumers/12 => consumer id 12 => 200
+POST /consumers => create a consumer => 201 Location Headers
+PUT /consumers/12 => Update consumer 12 => 200
+DELETE /consumers/12 => delete consumer 12  => 204
+
+DELETE /consumers => delete all consumers
+PATCH /consumers/12=> update only send the changes
+HEAD /consumers or /consumers/12 => return only Headers
+
+OPTIONS /consumers or /consumers/12 => CORS automatically send by the browser
