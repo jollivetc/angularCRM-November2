@@ -1,10 +1,19 @@
 <mat-toolbar color="primary">
   <span>{{title}}</span>
   <span class="fill-space"></span>
-  <span>buttons</span>
+  <span>
+    <a mat-icon-button matTooltip="Home"
+        routerLink="/home"
+        routerLinkActive="isActive">
+        <mat-icon>home</mat-icon>
+    </a>
+    <a mat-icon-button matTooltip="logout"
+        routerLink="/login"
+        routerLinkActive="isActive">
+        <mat-icon>person</mat-icon>
+    </a>
+  </span>
 </mat-toolbar>
 
-<crm-login></crm-login>
+<router-outlet></router-outlet>
 
-<crm-dummy label="Hello" (sended)="received($event)"></crm-dummy>
-<crm-dummy [label]="title" (sended)="received2($event)"></crm-dummy>
