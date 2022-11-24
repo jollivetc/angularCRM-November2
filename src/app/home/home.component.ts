@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   obs?:Observable<number>;
   private subs:Subscription[]=[]
+  phoneNumber="0123456789"
 
   constructor(private demoObservable:DemoObservableService) { }
 

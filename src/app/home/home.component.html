@@ -1,3 +1,10 @@
 <button (click)="testObservable()">test Observable</button>
 <button (click)="testObservableAsync()">test Observable with pipe async</button>
 {{obs|async}}
+
+<p>
+  without pipe : {{phoneNumber}}
+</p>
+<p>
+  with pipe : {{phoneNumber | phone}}
+</p>
