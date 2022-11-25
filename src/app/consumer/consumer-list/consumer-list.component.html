@@ -1,3 +1,9 @@
+<input type="text" [(ngModel)]="search" (keyup)="searchConsumers($event)">
+<a mat-icon-button matTooltip="New consumer"
+        routerLink="/consumer-fiche">
+        <mat-icon>person_add</mat-icon>
+</a>
+
 
 <table>
   <tr *ngFor="let consumer of consumersObs$|async">

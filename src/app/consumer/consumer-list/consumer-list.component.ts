@@ -11,6 +11,7 @@ import { Consumer } from '../model/consumer';
 export class ConsumerListComponent implements OnInit {
 
   consumersObs$?:Observable<Consumer[]>;
+  search:string= "";
 
   constructor(private consumerService:ConsumerService) { }
 
@@ -18,4 +19,7 @@ export class ConsumerListComponent implements OnInit {
     this.consumersObs$ = this.consumerService.getAllConsumers();
   }
 
+  searchConsumers($event:any):void{
+    this.consumersObs$ = this.consumerService.findConsumers(this.search);
+  }
 }
