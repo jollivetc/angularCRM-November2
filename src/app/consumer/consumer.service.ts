@@ -22,6 +22,10 @@ export class ConsumerService {
     return this.http.get<Consumer>(`/api/consumers/${id}`)
   }
 
+  deleteConsumer(id:number):Observable<Object>{
+    return this.http.delete<Object>(`/api/consumers/${id}`)
+  }
+
   saveConsumer(consumer:Consumer):Observable<Consumer>{
     if(consumer.id){
       return this.http.put<Consumer>(`/api/consumers/${consumer.id}`, consumer);

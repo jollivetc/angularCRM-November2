@@ -15,6 +15,7 @@ import { JWTInterceptorService } from './common/jwtinterceptor.service';
 import { PhonePipe } from './common/phone.pipe';
 import { ConsumerListComponent } from './consumer/consumer-list/consumer-list.component';
 import { ConsumerFicheComponent } from './consumer/consumer-fiche/consumer-fiche.component';
+import { AuthenticationService } from './login/authentication.service';
 
 @NgModule({
   declarations: [

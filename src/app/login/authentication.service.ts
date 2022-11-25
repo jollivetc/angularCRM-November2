@@ -8,7 +8,7 @@ const KEY_USER = 'angular.crm.user';
 const KEY_TOKEN = 'angular.crm.token';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn:'root'
 })
 export class AuthenticationService {
 

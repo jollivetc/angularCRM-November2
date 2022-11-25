@@ -1,4 +1,4 @@
-<input type="text" [(ngModel)]="search" (keyup)="searchConsumers($event)">
+<input type="text" [(ngModel)]="search" (keyup)="searchConsumers()">
 <a mat-icon-button matTooltip="New consumer"
         routerLink="/consumer-fiche">
         <mat-icon>person_add</mat-icon>
@@ -17,6 +17,9 @@
         [routerLink]="['/consumer-fiche', consumer.id]">
         <mat-icon>edit</mat-icon>
       </a>
+      <button mat-icon-button (click)="deleteConsumer(consumer.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
     </td>
   </tr>
 </table>
